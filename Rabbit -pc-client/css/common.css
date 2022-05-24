@@ -1,0 +1,155 @@
+/* 版心的公共类 */
+.container{
+    width: 1240px;
+    margin: 0 auto;
+
+}
+/* 快捷菜单模块：rabbit-shortcut ,通用栏宽度固定，不用配置*/
+.rabbit-shortcut{
+    height:52px;
+    background-color: #333333;
+
+}
+.rabbit-shortcut .container{
+    height: 52px;
+    /* ps */
+    /* background-color:skyblue ; */
+}
+/* 使块标签由竖向横排列 */
+.rabbit-shortcut ul li{
+    float: left;
+    /* 使字垂直居中 */
+    line-height: 52px;
+    /* 为竖杆设置颜色 */
+    color: #666666;
+}
+/* 使竖杆和字之间有间隔 */
+.rabbit-shortcut ul a{
+    margin: 0 16px;
+    color: #dcdcdc;
+    font-size: 14px;
+}
+/* 去除掉最后一个标签的右间距 */
+.rabbit-shortcut li:last-child a{
+    margin-right: 0;
+}
+/* 设置手机 */
+.rabbit-shortcut li:last-child a::before{
+    content: '';
+    display:inline-block;
+    width:11px ;
+    height: 16px;
+    /* 使手机和右边文字有距离 */
+    margin-right: 8px;
+    /* 使手机文字往上调 */
+    margin-top: -3px;
+    /* ps */
+    /* background-color: red; */
+    /* 更换成精灵图片 */
+    background: url('../images/sprites.png')
+    -160px -70px;
+    /* 垂直对齐方式 */
+    vertical-align:middle ;
+
+}
+/* 主导航模块 */
+.rabbit-main-nav{
+    height: 130px;
+    padding-top: 30px;
+    /* 自动内减，使主导航模块的盒子不会被撑大 */
+    box-sizing:border-box ;
+    /* background-color: pink; */
+}
+.rabbit-main-nav .logo{
+    width: 207px;
+    height: 70px;
+    /* ps */
+    /* 红色背景颜色是为了方便看，logo设置好后可删除掉 */
+    /* background-color: red; */
+    /* 使logo向左右偏移，与左边隔开距离 */
+    margin-left: 20px;
+}
+/* 给a标签设置宽高，不会直接生效,想要设置宽高用display */
+.rabbit-main-nav .logo a{
+    display: block;
+    height: 70px;
+    background: url('../images/logo.png');
+    /* 设置logo与刚刚设置的盒子模块一样大小 */
+    background-size: 100% 100%;
+    /* 使小兔鲜三个字去除掉 */
+    font-size:0
+}
+/* 设置整个导航模块文字与logo模块文字隔开距离 */
+.rabbit-main-nav nav{
+    margin-left: 40px;
+}
+.rabbit-main-nav nav li{
+    float: left;
+    height: 70px;
+    /* 设置字和字之间的间隔 */
+    margin-right: 48px;
+    line-height: 70px;
+}
+/* 使点击文字颜色即下划线发生改变 */
+.rabbit-main-nav nav a:hover{
+    color:#27ba9b ;
+    border-bottom:1px solid #27ba9b;
+    /* 使文字与下划线之间有距离 */
+   padding-bottom: 7px; 
+}
+.rabbit-main-nav .search {
+    /* 父位置与子位置都得设置，父位置没有设置会使得精灵图跑到快捷菜单模块 */
+    position: relative;
+    width: 172px;
+    height: 30px;
+    margin-top: 24px;
+    /* ps */
+    margin-left: 24px;
+    /* 用color显示不出颜色 */
+    background-color: orange;
+ 
+}
+.rabbit-main-nav .search::before {
+    content: '';
+    /* 伪元素不能在input标签生成 ，先写定位能设置宽高*/
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    /* ps */
+    background: url('../images/sprites.png') -80px -70px ;
+    /* background-color: red; */
+}
+.rabbit-main-nav .search input{
+    width: 172px;
+    height:30px;
+    border-bottom: 2px;
+    /* 文字与边框距离 */
+    padding-left: 31px;
+}
+.rabbit-main-nav .cart{
+    position: relative;
+    width: 23px;
+    height: 23px;
+    /* ps */
+    /* background-color: skyblue; */
+    margin-top: 28px;
+    margin-left: 15px;
+    background: url('../images/sprites.png')-120px -70px;
+}
+.rabbit-main-nav .cart span{
+    /* 子绝父相 */
+    position: absolute;
+    right: -12px;
+    top: -5px;
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 8px;
+    /* 设置红色标签内的颜色 */
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 15px;
+}
