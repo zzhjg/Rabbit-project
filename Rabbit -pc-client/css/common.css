@@ -153,3 +153,70 @@
     text-align: center;
     line-height: 15px;
 }
+/* 宣传服务 */
+.rabbit-service{
+  height: 174px;  
+  background-color: #333333;
+}
+.rabbit-service .container{
+    height: 173px;
+    width: 1393px;
+    /* 版心下边框 */
+    border-bottom: 1px solid #434343;
+    /* background-color: pink; */
+}
+/* a标签是行内元素，不能直接设置宽高 ，可以设置float*/
+.rabbit-service .container a{
+    float:left ;
+    width: 33.33%;
+    height: 173px;
+    /* background-color: skyblue; */
+    text-align: center;
+    line-height: 173px;
+    /* 文字大小 */
+    font-size: 28px;
+    color: #fff;
+}
+/* 伪元素，设置精灵图 */
+.rabbit-service .container a::before{
+    content: '';
+    display: inline-block;
+    width:58px ;
+    height: 58px;
+    /* background-color: red; */
+    background: url('../images/sprites.png')0 0;
+    /* 垂直对齐方式，文字与图片中部对齐 */
+    vertical-align:middle ;
+    margin-right: 19px;
+}
+/* 分别设置不同的精灵图 */
+.rabbit-service a:nth-child(2)::before{
+    /* 精灵图图标取负值 */
+    background-position: -130px 0;
+}
+.rabbit-service a:nth-child(3)::before{
+    background-position: -65px 0;
+}
+.rabbit-copyright{
+    height: 168px;
+    background-color: #333;
+}
+.rabbit-copyright .container{
+    height: 168px;
+    /* 文字与顶部隔开距离 */
+    padding-top: 41px;
+    /* background-color: pink; */
+    /* 使格子不会被撑大 */
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    /* 这里注释掉那第二个p标签会没有变化 */
+    color: #999; 
+    /* 在这里设置a标签文字颜色没有变化，会被覆盖掉 */ */
+}
+.rabbit-copyright .container a{
+    color: #999;
+}
+.rabbit-copyright .container p:first-child{
+height: 35px;
+}

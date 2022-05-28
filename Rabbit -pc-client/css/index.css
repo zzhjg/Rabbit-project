@@ -1,0 +1,180 @@
+/* 网站入口 */
+.rabbit-entry{
+    height: 500px;
+    background-color: #f5f5f5;
+}
+.rabbit-entry .container{
+    position: relative;
+    height: 500px;
+    background-color: pink;
+}
+.rabbit-entry .container .category{
+    /* 设置定位 ，否则都是块元素，与轮播图会垂直分布*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:251px ;
+    height: 500px;
+    /* 设置黑色加透明度 ,最后是0.8，0可以省略掉*/
+    background-color: rgba(0, 0,0,.8 );
+}
+.rabbit-entry .category a{
+    color: #fff;
+
+
+}
+.rabbit-entry .category li{
+    position: relative;
+    height: 50px;
+    /* li标签与文字的间距 */
+    padding-left: 36px;
+    line-height: 50px;
+}
+/* 点击后会变色 */
+.rabbit-entry .category li:hover{
+    background-color: #27ba9b;
+}
+.rabbit-entry .category span{
+    font-size: 14px;
+}
+/* 使文字与文字隔开距离，由于第二组文字开始包含在span标签里 */
+.rabbit-entry .category span:first-child{
+    margin-left: 15px;
+    /* margin-right: 15px; */
+}
+.rabbit-entry .category a::after{
+    content: '';
+    /* 设置相对位置，设置宽高才会显示出来 */
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    height: 11px;
+    width: 6px;
+    /* background-color: red; */
+    background: url('../images/sprites.png') -80px -110px;
+}
+.rabbit-entry .prev{
+    position: absolute;
+    top: 228px;
+    left: 260px;
+    width: 45px;
+    height: 45px;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    border-radius: 50px;
+    /* 直接这样写会把上面的背景颜色覆盖掉，解决办法是可以把这一行写在背景颜色前面 */
+    /* background: url('../images/sprites.png')0px -70px; */
+    background: rgba(0, 0, 0, 0.2) url('../images/sprites.png')13px -60px;
+}
+.rabbit-entry .next{
+    position: absolute;
+    top: 228px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    border-radius: 50px;
+    /* 直接这样写会把上面的背景颜色覆盖掉，解决办法是可以把这一行写在背景颜色前面 */
+    /* background: url('../images/sprites.png')0px -70px; */
+    background: rgba(0, 0, 0, 0.2) url('../images/sprites.png')-22px -60px;
+    
+}
+.rabbit-entry .indicator{
+    position: absolute;
+    left: 680px;
+    bottom: 31px;
+    width: 110px;
+    height: 10px;
+    /* background-color: red; */
+}
+.rabbit-entry .indicator li{
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin-right: 15px;
+    background-color: rgba(255, 255, 255, .43);
+    border-radius:50% ;
+}
+/* 使中间的圆标签变为白色 */
+.rabbit-entry .indicator li.active{
+ background-color: #fff;   
+}
+/* 是最后一个圆不会被隔开距离 */
+.rabbit-entry .indicator li:last-child{
+    margin-right: 0;
+}
+/* 新鲜好物模块 */
+.rabbit-new-goods{
+ height: 520px;   
+ /* ps */
+ /* background-color: pink; */
+}
+.rabbit-new-goods .goods-hd{
+  height: 115px;  
+  /* background-color: skyblue; */
+  line-height: 115px;
+}
+.rabbit-new-goods .goods-hd h2{
+    /* ，设置固定高度，不会与下方的栏块高度冲突 */
+    height: 115px;
+    font-size: 29px;
+    font-weight: 400;
+}
+.rabbit-new-goods .goods-hd h2 span{
+    font-size: 16px;
+    color: #999;
+}
+.rabbit-new-goods .goods-hd a{
+    color: #666;
+
+}
+.rabbit-new-goods .goods-hd a::after{
+   content: '' ;
+   width: 7px;
+   height: 13px;
+   /* background-color: red; */
+   background: url('../images/sprites.png') 0px -110px;
+   display: inline-block;
+   margin-left: 13px;
+   vertical-align: middle;
+}
+.rabbit-new-goods .goods-list{
+    height: 405px;
+    /* background-color: orange; */
+}
+.rabbit-new-goods .goods-list li{
+    /* 使li标签水平显示 */
+    float: left;
+    width: 304px;
+    height: 405px;
+    /* 使每个li标签隔开距离 */
+    margin-right: 8px;
+    background-color: #f0f9f4;
+    /* 保证文本没有行高间距的影响 */
+    line-height: 1;
+    /* 使文本水平居中 */
+    text-align: center;
+}
+/* 使4个li标签在通栏中平均分布 */
+.rabbit-new-goods .goods-list li:last-child{
+    margin-right: 0px;
+}
+.rabbit-new-goods .goods-list li img{
+    width: 100%;
+}
+.rabbit-new-goods .goods-list li h3{
+    margin-top: 22px;
+    /* 使两行文字隔开距离 也可以通过设置高度隔开距离 height：30px*/
+    margin-bottom: 19px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.rabbit-new-goods .goods-list li p{
+    color: red;
+    font-size: 23px;
+}
+.rabbit-new-goods .goods-list li  span{
+    font-size: 17px;
+}
+
+
+
